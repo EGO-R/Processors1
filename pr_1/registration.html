@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+    <title>Процессоры</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="register.css">
+</head>
+
+
+
+
+<body>
+
+<div class="banner">
+
+
+    <a href="main_page.html"><img src="Images/cpu-logo.png" class="logo" width="1167px" height="957px"></a>
+
+
+    <a href="shop_page.html" class="shop-button"><p>Магазин</p> </a>
+
+
+
+
+
+
+
+
+    <div class="login">
+        <input type="checkbox" name="logging_in" id="logging_in" required>
+        <label for="logging_in"><img src="Images\login_img.png" width="50px" class="login_img"></label>
+
+
+        <div class="forms">
+
+
+            <h2>Вход</h2>
+
+            <form action="" method="post" class="sign_in_form">
+                <input type="text" name="mail_login" id="mail_login" required placeholder="Логин">
+
+
+                <input type="password" name="password_login" id="password_login" required placeholder="Пароль">
+
+                <p>Нет аккаунта? <a href="registration.html">Зарегистрироваться</a></p>
+
+                <button type="submit">Войти</button>
+            </form>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+    <h2>Регистрация</h2>
+
+    <form action="" method="post" class="register_form">
+
+        <div id="pic1">
+            <input type="file" name="pic" id="pic" accept="image/gif, image/png, image/jpg, image/jpeg">
+            <label for="pic">Выберите файл</label>
+
+        </div>
+
+        <input type="text" name="name" id="name" required placeholder="Отображаемое имя">
+
+        <input type="text" name="first-name" id="first-name" required placeholder="Имя">
+
+        <input type="text" name="last-name" id="last-name" required placeholder="Фамилия">
+
+        <input type="email" name="mail_register" id="mail_register" placeholder="Почта">
+
+        <input type="tel" name="telephone" id="telephone" required pattern="^[0-9]+$" placeholder="Телефон">
+        
+        <input type="datetime-local" name="date" id="date" required min="2000-01-01T00:00" max="2023-10-01T00:00">
+
+
+        <textarea name="about" id="about" placeholder="Расскажите о себе..."></textarea>
+
+
+        <fieldset id="sex">
+            <legend>Выберите Ваш пол:</legend>
+
+            <label>
+                <input type="radio" name="sex" value="male">
+                М
+            </label>
+
+            <label>
+                <input type="radio" name="sex" value="female">
+                Ж
+            </label>
+        </fieldset>
+
+
+        <select name="city" id="city">
+            <option value="" selected>-- Выберите город --</option>
+            <option value="Moscow">Москва</option>
+            <option value="Not Moscow">Не Москва</option>
+        </select>
+    
+        
+    
+        
+    
+        <input type="password" name="password_register1" id="password_register1" required placeholder="Пароль">
+
+        <input type="password" name="password_register2" id="password_register2" required placeholder="Повторите пароль">
+
+        <p id="agreed1">
+            <input type="checkbox" name="agreed" id="agreed" required>
+            <label for="agreed">Я согласен с условиями</label>
+        </p>
+
+        
+
+        <button type="submit" id="send_button">Зарегистрироваться</button>
+    </form>
+
+
+    <footer>
+        <address>
+            <!-- Контактная информация -->
+            <p><i>Номер телефона:</i> <a href="tel:89258310755">89258310755</a></p>
+            <p><i>Адрес электронной почты:</i> <a href="mailto:egor_trusov00@mail.ru">egor_trusov00@mail.ru</a></p>
+        </address>
+    
+            <a class="yt-button"><img src="Images/yt.png" width="30px" height="22px"></a>
+        
+            <a class="vk-button"><img src="Images/vk.png" width="30px" height="18px"></a>
+        
+            <a class="tg-button"><img src="Images/tg.png" width="30px" height="27"></a>
+    
+        
+    </footer>
+
+
+
+    <noscript>Включите Java Script!</noscript>
+    <script src="script.js"></script>
+</body>
+</html>

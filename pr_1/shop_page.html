@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+    <title>Процессоры</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shop_style.css">
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+<div class="banner">
+
+
+    <a href="main_page.html"><img src="Images/cpu-logo.png" class="logo" width="1167px" height="957px"></a>
+
+
+    <a href="shop_page.html" class="shop-button"><p>Магазин</p> </a>
+
+
+
+
+
+
+
+
+    <div class="login">
+        <input type="checkbox" name="logging_in" id="logging_in" required>
+        <label for="logging_in"><img src="Images\login_img.png" width="50px" class="login_img"></label>
+
+
+        <div class="forms">
+
+
+            <h2>Вход</h2>
+
+            <form action="" method="post" class="sign_in_form">
+                <input type="text" name="mail_login" id="mail_login" required placeholder="Логин">
+
+
+                <input type="password" name="password_login" id="password_login" required placeholder="Пароль">
+
+                <p>Нет аккаунта? <a href="registration.html">Зарегистрироваться</a></p>
+
+                <button type="submit">Войти</button>
+            </form>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+    <div class="shop_header">
+        <h2>Товары</h2>
+        <div id="cart">
+            <img id="cart-img" src="Images/basket.png">
+            <div id="cart-content" style="display: none">
+                <div class="cart_head">
+                    <h2>Корзина</h2>
+                    <div id="filter_number">
+                        <input type="text" id="filter_from" placeholder="От">
+                        <input type="text" id="filter_to" placeholder="До">
+                    </div>
+
+                    <button id="sort_button"><img src="Images/sort.png"></button>
+                </div>
+
+                <div class="cart_footer">
+                    <p id="cart_summary">Итог: 0</p>
+                    <button id="clear_cart_button">Очистить</button>
+                    <button id="buy_cart_button">Купить</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    
+    <article id="all_products">
+        <section class="cpu">
+            <button class="favourite" onclick="like_button(this)">❤</button>
+
+            <img class="product_img" src="Products/amd.png" height="100">
+            <div class="product_description">
+                <p class="product_name">amd</p>
+                <p class="price">5000</p>
+            </div>
+        </section>
+
+        <section class="cpu">
+            <button class="favourite" onclick="like_button(this)">❤</button>
+
+            <img src="Products/intel.png" height="100px">
+            <div class="product_description">
+                <p class="product_name">intel</p>
+                <p class="price">11000</p>
+            </div>
+        </section>
+
+        <section class="cpu">
+            <button class="favourite" onclick="like_button(this)">❤</button>
+
+            <img class="product_img" src="Products/amd.png" height="100">
+            <div class="product_description">
+                <p class="product_name">amd</p>
+                <p class="price">10000</p>
+            </div>
+        </section>
+
+        <section class="cpu">
+            <button class="favourite" onclick="like_button(this)">❤</button>
+
+            <img src="Products/intel.png" height="100px">
+            <div class="product_description">
+                <p class="product_name">intel</p>
+                <p class="price">15000</p>
+            </div>
+        </section>
+
+        <section class="cpu">
+            <button class="favourite" onclick="like_button(this)">❤</button>
+
+            <img class="product_img" src="Products/amd.png" height="100">
+            <div class="product_description">
+                <p class="product_name">amd</p>
+                <p class="price">13000</p>
+            </div>
+        </section>
+
+        <section class="cpu">
+            <button class="favourite" onclick="like_button(this)">❤</button>
+
+            <img src="Products/intel.png" height="100px">
+            <div class="product_description">
+                <p class="product_name">intel</p>
+                <p class="price">17000</p>
+            </div>
+        </section>
+
+        <section class="cpu">
+            <button class="favourite" onclick="like_button(this)">❤</button>
+
+            <img class="product_img" src="Products/amd.png" height="100">
+            <div class="product_description">
+                <p class="product_name">amd</p>
+                <p class="price">18000</p>
+            </div>
+        </section>
+
+        <section class="cpu">
+            <button class="favourite" onclick="like_button(this)">❤</button>
+
+            <img src="Products/intel.png" height="100px">
+            <div class="product_description">
+                <p class="product_name">intel</p>
+                <p class="price">12000</p>
+            </div>
+        </section>
+
+        <section class="cpu">
+            <button class="favourite" onclick="like_button(this)">❤</button>
+
+            <img class="product_img" src="Products/amd.png" height="100">
+            <div class="product_description">
+                <p class="product_name">amd</p>
+                <p class="price">9000</p>
+            </div>
+        </section>
+
+        <section class="cpu">
+            <button class="favourite" onclick="like_button(this)">❤</button>
+
+            <img src="Products/intel.png" height="100px">
+            <div class="product_description">
+                <p class="product_name">intel</p>
+                <p class="price">8000</p>
+            </div>
+        </section>
+
+        <section class="cpu">
+            <button class="favourite" onclick="like_button(this)">❤</button>
+
+            <img class="product_img" src="Products/amd.png" height="100">
+            <div class="product_description">
+                <p class="product_name">amd</p>
+                <p class="price">20000</p>
+            </div>
+        </section>
+
+        <section class="cpu">
+            <button class="favourite" onclick="like_button(this)">❤</button>
+
+            <img src="Products/intel.png" height="100px">
+            <div class="product_description">
+                <p class="product_name">intel</p>
+                <p class="price">21000</p>
+            </div>
+        </section>
+    </article>
+    
+
+    <footer>
+        <address>
+            <!-- Контактная информация -->
+            <p><i>Номер телефона:</i> <a href="tel:89258310755">89258310755</a></p>
+            <p><i>Адрес электронной почты:</i> <a href="mailto:egor_trusov00@mail.ru">egor_trusov00@mail.ru</a></p>
+        </address>
+    
+
+            <a class="yt-button"><img src="Images/yt.png" width="30px" height="22px"></a>
+        
+            <a class="vk-button"><img src="Images/vk.png" width="30px" height="18px"></a>
+        
+            <a class="tg-button"><img src="Images/tg.png" width="30px" height="27"></a>
+
+    
+        
+    </footer>
+
+
+    <noscript>Включите Java Script!</noscript>
+    <script src="script.js"></script>
+</body>
+</html>
