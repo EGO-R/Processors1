@@ -31,13 +31,15 @@ h1 {
     position: relative;
     display: grid;
     grid-template-columns: 100%;
+    transition: all 0.5s ease-in-out;
 }
 
 #intel-timeline {
     position: absolute;
     left: 30px;
     width: 20px;
-    height: 100%;
+    top: 1.5rem;
+    height: calc(100% - 1.5rem - var(--last-elem-height) + 1.5rem);
     background: deepskyblue;
 }
 
@@ -109,6 +111,7 @@ h1 {
     transition: all 0.5s ease-in-out;
 
     & .current-gen-cpu {
+        width: auto;
         cursor: pointer;
         font-size: 0.8rem;
         background: #1ebdd2;
@@ -120,13 +123,10 @@ h1 {
 
         & h3 {
             font-size: 1.2rem;
-
-            &:hover {
-                text-decoration: underline;
-            }
         }
 
         .current-gen-cpu-characteristics {
+            width: 100%;
             opacity: 0;
 
 
@@ -135,15 +135,9 @@ h1 {
         &:hover {
             height: 11rem;
 
-
             .current-gen-cpu-characteristics {
                 animation: 0.3s show-gen-cpu-characteristics ease-in-out forwards;
                 animation-delay: 0.3s;
-
-                & *:hover {
-                    text-decoration: underline;
-                }
-
             }
         }
     }

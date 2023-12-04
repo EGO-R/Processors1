@@ -13,13 +13,10 @@ function createIntelCpuElement(name, tech_process, cores_threads, speed, mem) {
 
     // Добавляем классы и атрибуты
     div.className = 'current-gen-cpu';
-    div.addEventListener('focus', () => {
-        console.log("current");
-        console.log(intel_container.lastElementChild.offsetHeight);
-        intel_container.style.setProperty('--last-elem-height', intel_container.lastElementChild.offsetHeight + 'px');
+    div.addEventListener('mousemove', () => {
         let characteristics = div.getElementsByClassName("current-gen-cpu-characteristics")[0];
         characteristics.style.display = "block";
-    }, {capture: true});
+    });
 
 
     h3.className = 'current-gen-cpu-name';
@@ -47,6 +44,7 @@ function createIntelCpuElement(name, tech_process, cores_threads, speed, mem) {
     divChild.appendChild(p4);
     div.appendChild(h3);
     div.appendChild(divChild);
+
 
     return div;
 }
@@ -143,6 +141,17 @@ var intel_container = document.getElementById("intel-timeline-container");
 
 intel_container.appendChild(createGeneration5Element(11));
 intel_container.appendChild(createGeneration5Element(10));
+document.documentElement.style.setProperty('--last-elem-height', intel_container.lastElementChild.offsetHeight + 'px');
 
+for (let obj of document.getElementsByClassName("current-gen-cpu")) {
+    obj.style.width = obj.getElementsByClassName('current-gen-cpu-name')[0].offsetWidth;
+}
+
+
+new ResizeObserver(entries => {
+   for (let entry of entries) {
+    document.documentElement.style.setProperty('--last-elem-height',`${entry.contentRect.height}px`);
+   }
+}).observe(intel_container.lastElementChild);
 
 
