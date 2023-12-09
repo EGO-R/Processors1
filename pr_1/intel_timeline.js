@@ -13,9 +13,13 @@ function createIntelCpuElement(name, tech_process, cores_threads, speed, mem) {
 
     // Добавляем классы и атрибуты
     div.className = 'current-gen-cpu';
-    div.addEventListener('mousemove', () => {
+    div.addEventListener('mouseover', () => {
         let characteristics = div.getElementsByClassName("current-gen-cpu-characteristics")[0];
         characteristics.style.display = "block";
+    });
+    div.addEventListener('mouseout', () => {
+        let characteristics = div.getElementsByClassName("current-gen-cpu-characteristics")[0];
+        characteristics.style.display = "none";
     });
 
 
@@ -23,7 +27,6 @@ function createIntelCpuElement(name, tech_process, cores_threads, speed, mem) {
     h3.innerText = 'Core i' + name;
 
     divChild.className = 'current-gen-cpu-characteristics';
-    divChild.style.display = "none";
 
     p1.className = 'current-gen-cpu-tech-process';
     p1.innerText = 'Техпроцесс: ' + tech_process;
@@ -144,7 +147,9 @@ intel_container.appendChild(createGeneration5Element(10));
 document.documentElement.style.setProperty('--last-elem-height', intel_container.lastElementChild.offsetHeight + 'px');
 
 for (let obj of document.getElementsByClassName("current-gen-cpu")) {
-    obj.style.width = obj.getElementsByClassName('current-gen-cpu-name')[0].offsetWidth;
+    let characteristics = obj.getElementsByClassName('current-gen-cpu-characteristics')[0];
+    obj.style.width = String(characteristics.offsetWidth) + "px";
+    characteristics.style.display = "none";
 }
 
 

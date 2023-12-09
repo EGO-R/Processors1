@@ -56,7 +56,7 @@ body {
 
 /* нет таких */
 h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 
 h2 {
@@ -98,7 +98,7 @@ p b {
         grid-area: Banner;
         z-index: 100;
         display: grid;
-        grid-template-columns: calc(var(--logo-width) + 100px) auto 150px 100px;
+        grid-template-columns: calc(var(--logo-width) + 10%) auto 30% 100px;
         grid-template-rows: 100%;
         grid-template-areas: "Logo Empty Shop Login";
         align-items: center;
@@ -523,6 +523,7 @@ p b {
         border-radius: 30px;
         font-size: 1rem;
         cursor: pointer;
+        align-self: center;
     }
 
 }

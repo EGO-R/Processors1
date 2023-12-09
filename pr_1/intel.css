@@ -28,6 +28,7 @@ h1 {
 
 
 #intel-timeline-container {
+    --stripe-color: deepskyblue;
     position: relative;
     display: grid;
     grid-template-columns: 100%;
@@ -40,7 +41,7 @@ h1 {
     width: 20px;
     top: 1.5rem;
     height: calc(100% - 1.5rem - var(--last-elem-height) + 1.5rem);
-    background: deepskyblue;
+    background: var(--stripe-color);
 }
 
 .generation {
@@ -50,7 +51,7 @@ h1 {
     height: auto;
 
     grid-template-rows: auto auto;
-    grid-template-columns: 100px 100px 1fr;
+    grid-template-columns: 100px 50px 1fr;
 
     grid-template-areas:
             "Gen-line Gen-line Gen-name"
@@ -69,7 +70,7 @@ h1 {
         top: calc(1.5rem - 25px);
         left: 15px;
         border-radius: 50%;
-        background: deepskyblue;
+        background: var(--stripe-color);
     }
 
     & .gen-line-small-circle {
@@ -85,10 +86,10 @@ h1 {
     & .gen-line-stripe {
         position: absolute;
         height: 20px;
-        width: 150px;
+        width: calc(100% - 50px);
         top: calc(1.5rem - 10px);
         left: 50px;
-        background: deepskyblue;
+        background: var(--stripe-color);
     }
 
 }
@@ -133,7 +134,7 @@ h1 {
         }
 
         &:hover {
-            height: 11rem;
+            height: 12rem;
 
             .current-gen-cpu-characteristics {
                 animation: 0.3s show-gen-cpu-characteristics ease-in-out forwards;

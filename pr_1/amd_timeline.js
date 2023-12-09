@@ -26,7 +26,6 @@ function createAmdCpuElement(name, tech_process, cores_threads, speed, mem) {
     h3.innerText = 'Ryzen ' + name;
 
     divChild.className = 'current-gen-cpu-characteristics';
-    divChild.style.display = "none";
 
     p1.className = 'current-gen-cpu-tech-process';
     p1.innerText = 'Техпроцесс: ' + tech_process;
@@ -148,3 +147,17 @@ var amd_container = document.getElementById("amd-timeline-container");
 amd_container.appendChild(createGeneration5Element(5));
 amd_container.appendChild(createGeneration5Element(4));
 amd_container.appendChild(createGeneration5Element(3));
+document.documentElement.style.setProperty('--last-elem-height', amd_container.lastElementChild.offsetHeight + 'px');
+
+for (let obj of document.getElementsByClassName("current-gen-cpu")) {
+    let characteristics = obj.getElementsByClassName('current-gen-cpu-characteristics')[0];
+    obj.style.width = String(characteristics.offsetWidth) + "px";
+    characteristics.style.display = "none";
+}
+
+
+new ResizeObserver(entries => {
+    for (let entry of entries) {
+        document.documentElement.style.setProperty('--last-elem-height',`${entry.contentRect.height}px`);
+    }
+}).observe(amd_container.lastElementChild);

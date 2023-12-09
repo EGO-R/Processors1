@@ -550,27 +550,6 @@ function createProductElement(price_value) {
     return section;
 }
 
-if (products.length) {
-    let shop_inventory = document.getElementById("all_products");
 
-    window.addEventListener('scroll', function() {
-        let scrollPosition = window.scrollY;
-        let windowSize = window.innerHeight;
-        let bodyHeight = document.documentElement.scrollHeight;
-
-        if(Math.ceil(windowSize + scrollPosition) >= bodyHeight) {
-            for (let i = 0; i < 12; i++)
-                shop_inventory.appendChild(createProductElement(String(Math.floor(Math.random() * 30000))));
-
-            for (let i = 0; i < buttons.length; i++) {
-                buttons[i].style.color = 'white';
-            }
-            for (let obj of products) {
-                obj.addEventListener('click', add_to_cart);
-            }
-
-        }
-    });
-}
 
 
