@@ -7,9 +7,6 @@ body {
     position: relative;
     display: grid;
 
-    background-image: url("Images/star_background.png");
-    background-size: cover;
-
 
     --logo-height: 7vh;
     --logo-width: calc(var(--logo-height) * 1.22);

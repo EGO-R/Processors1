@@ -1,53 +1,5 @@
 "use strict";
 
-// function register() {
-//     var login = prompt("Введите логин");
-//     var password;
-//     if (login === "Админ") {
-//         console.log("Правильный логин");
-//         password = prompt("Введите пароль");
-//         password_check(password);
-//     }
-//     else if (login) {
-//         console.log("Неправильный логин");
-//         alert("Неизвестный пользователь");
-//     }
-//
-//     else {
-//         console.log("Не вводим логин");
-//         alert("Отменено");
-//     }
-//
-//
-// }
-//
-// function password_check(password) {
-//     if (password === "Я главный") {
-//         console.log("Правильный пароль");
-//         alert("Здравствуйте!");
-//     }
-//     else if (password || password === "") {
-//         console.log("неправильный пароль");
-//         alert("Неверный пароль");
-//     }
-//     else {
-//         console.log("Не вводим пароль");
-//         alert("Отменено");
-//     }
-// }
-//
-// var ifLogin = confirm("Желаете пройти регистрацию на сайте?");
-//
-// if (ifLogin) {
-//     console.log("Регистрируемся");
-//     alert("Круто!");
-//     register();
-// }
-//
-// else {
-//     alert("Попробуй ещё раз");
-//     console.log("Не регистрируемся");
-// }
 
 var ifLike = false;
 var ifDislike = false;
@@ -68,27 +20,6 @@ for (let i = 0; i < buttons.length; i++) {
     buttons[i].style.color = 'white';
 }
 
-// function drawing(event) {
-//     console.log("drawing...");
-//     if (likes_amount === 0)
-//         return;
-//
-//
-//
-//     var newthing = document.createElement("p");
-//     document.getElementById("all_products").appendChild(newthing);
-//
-//     var X = event.clientX;
-//     var Y = event.clientY;
-//
-//     newthing.style.position = "fixed";
-//     newthing.style.left = X + "px";
-//     newthing.style.top = Y + "px";
-//
-//     newthing.innerHTML = "❤";
-//
-//
-// }
 
 
 var submit_button = document.getElementById("send_button");
@@ -169,38 +100,6 @@ if (submit_button) {
 
 
 
-// function Accumulator(startingValue) {
-//     this.value = startingValue;
-
-//     this.read = () => {
-//         let input = prompt('Сколько добавить?');
-
-//         if(input !== null && input !== '' && String(Number(input)) === input) {
-//             this.value = Number(this.value) + Number(input);
-//         }
-//         else {
-//             alert('Ошибка');
-//         }
-
-//         alert(this.value);
-//     };
-
-// }
-
-// let bin = new Accumulator(1);
-
-
-// var devs = document.getElementsByClassName('Developers')[0];
-
-// if (devs) {
-//     var bin_button = document.createElement("button");
-
-//     devs.appendChild(bin_button);
-
-//     bin_button.innerHTML = "Добавить в корзину";
-//     bin_button.style.position = "absolute";
-//     bin_button.addEventListener('click', bin.read);
-// }
 
 function sort_cart_content() {
     content.sort((a, b) => {
@@ -359,7 +258,6 @@ function render_cart() {
 }
 
 function add_to_cart() {
-    let like = this.getElementsByClassName("favourite")[0];
     if (ifLike) {
         let cart_obj = new Cart_obj(this);
         cart_obj.cart_element.getElementsByClassName("cart-subtract")[0].addEventListener('click', cart_obj.decrease);
@@ -391,7 +289,7 @@ var cart = document.getElementById("cart-content");
 
 var products = document.getElementsByClassName("cpu");
 
-if (products) {
+if (products.length) {
     for (let obj of products) {
         obj.addEventListener('click', add_to_cart);
     }
@@ -507,12 +405,7 @@ if (notification_list) {
 }
 
 
-if (products.length) {
-    window.addEventListener('scroll', () => {
-        let scrollPosition = window.scrollY;
-        document.body.style.backgroundPosition = 'center ' + (scrollPosition * 0.3) + 'px';
-    });
-}
+
 
 
 function createProductElement(price_value) {
