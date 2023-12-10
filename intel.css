@@ -12,7 +12,7 @@ body {
 
     display: grid;
 
-    grid-template-rows: calc(var(--logo-height) + 5px) auto auto 100px;
+    grid-template-rows: calc(var(--logo-height) + 5px) auto auto auto;
     grid-template-areas:
             "Banner"
             "Header"
